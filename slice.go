@@ -35,4 +35,27 @@ func main() {
 
 	fmt.Println(days)
 
+	var newSlice = make([]string, 2, 5)
+	newSlice[0] = "Eko"
+	newSlice[1] = "Kurniawan"
+	fmt.Println(newSlice)
+	fmt.Println(len(newSlice))
+	fmt.Println(cap(newSlice))
+
+	newSlice2 := append(newSlice, "Khannedy")
+	fmt.Println(newSlice2)
+	fmt.Println(len(newSlice2))
+	fmt.Println(cap(newSlice2))
+
+	newSlice2[0] = "Jaka"
+	fmt.Println(newSlice2)
+	fmt.Println(newSlice)
+
+	fromSlice := days[:]
+	toSlice := make([]string, len(fromSlice), cap(fromSlice))
+	copy(toSlice, fromSlice)
+	fmt.Println(fromSlice) 
+	fmt.Println(toSlice) 
+
+	
 }
